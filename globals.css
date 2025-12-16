@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+	--bg-start: 8 10 17;
+	--bg-end: 15 23 42;
+}
+
+html, body {
+	height: 100%;
+}
+
+body {
+	background: linear-gradient(180deg, rgba(var(--bg-start),1) 0%, rgba(var(--bg-end),1) 100%);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.container-center {
+	max-width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* mic pulse animation for avatar */
+@keyframes micPulse {
+	0% { box-shadow: 0 0 0 0 rgba(255,255,255,0.08); }
+	70% { box-shadow: 0 0 0 12px rgba(255,255,255,0); }
+	100% { box-shadow: 0 0 0 0 rgba(255,255,255,0); }
+}
+
+.animate-mic-pulse {
+	animation: micPulse 1.6s infinite;
+}
+
+.backdrop-blur {
+	backdrop-filter: blur(6px);
+}
+
